@@ -1,0 +1,8 @@
+<svg width="550" height="70" viewBox="0 0 550 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Removed the original path data for "ethan smith" and the small red path element -->
+<!-- Split name into two parts for multi-color effect and adjusted font size/position -->
+<text x="0" y="50" font-family="Poppins" font-size="50"> <!-- Increased font-size and adjusted y for vertical centering within new viewBox -->
+  <tspan fill="white">Manogna</tspan><tspan fill="#F13024">Cheekoti</tspan>
+</text>
+<!-- The red path element was removed as it was causing clipping issues with the increased text size -->
+</svg>
