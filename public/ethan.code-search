@@ -1,0 +1,9 @@
+# Query: ethan
+# ContextLines: 1
+
+1 result - 1 file
+
+public/logo.svg:
+  1  <svg width="550" height="70" viewBox="0 0 550 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  2: <!-- Removed the original path data for "" and the small red path element -->
+  3  <!-- Split name into two parts for multi-color effect and adjusted font size/position -->
