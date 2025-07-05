@@ -22,14 +22,28 @@ const Layout = ({ children }) => {
         <title>Manogna Cheekoti | Portfolio</title>
         <meta
           name="description"
-          content="Ethan Smith is a Full-stack web developer with 10+ years of experience."
+          content="Manogna Cheekoti is a Full-stack web developer with 4+ years of experience."
         />
         <meta
           name="keywords"
           content="react, next, nextjs, html, css, javascript, js, modern-ui, modern-ux, portfolio, framer-motion, 3d-website, particle-effect"
         />
-        <meta name="author" content="Sanidhya Kumar Verma" />
+        <meta name="author" content="Manogna Cheekoti" />
         <meta name="theme-color" content="#f13024" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://your-netlify-app.netlify.app/" />
+        <meta property="og:title" content="Manogna Cheekoti | Portfolio" />
+        <meta property="og:description" content="Manogna Cheekoti is a Full-stack web developer with 4+ years of experience." />
+        <meta property="og:image" content="https://your-netlify-app.netlify.app/avatar.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://your-netlify-app.netlify.app/" />
+        <meta property="twitter:title" content="Manogna Cheekoti | Portfolio" />
+        <meta property="twitter:description" content="Manogna Cheekoti is a Full-stack web developer with 4+ years of experience." />
+        <meta property="twitter:image" content="https://your-netlify-app.netlify.app/avatar.png" />
       </Head>
 
       <TopLeftImg />
