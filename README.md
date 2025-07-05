@@ -60,4 +60,3 @@ Email: manognacheekoti@gmail.com
 📄 License
 Distributed under the MIT License. See LICENSE for more information.
 
-(Remember to replace https://github.com/ManognaCheekoti/your-portfolio-repo-name.git and the GitHub profile link with your actual repository and profile details.)
