@@ -169,7 +169,7 @@ const About = () => {
 
       {/* The main content section will now take full width on xl screens */}
       {/* Removed xl:flex-row as Avatar is removed, content will stack vertically */}
-      <div className="container mx-auto h-full flex flex-col items-center xl:pt-[120px]"> {/* Adjusted xl:pt to 120px */}
+      <div className="container mx-auto h-full flex flex-col items-center xl:pt-[100px]"> {/* Adjusted xl:pt to 100px */}
         {/* Removed Avatar component and its wrapper div */}
         {/* The content below will now take full width on xl screens */}
         <div className="flex-1 flex flex-col justify-center w-full">
