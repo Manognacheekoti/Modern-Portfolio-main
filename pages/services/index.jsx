@@ -124,6 +124,7 @@ export const experienceDetails = [
     company: "PrimeSoft",
     role: "Software Engineer", // Assuming this role, please confirm
     duration: "Jan 2023 - Feb 2025",
+    performanceSummary: "Enhanced system observability by 30%, led modernization to event-driven architectures, and automated MQ deployments.", // Added performance summary
     description: [
       "Engineered and supported enterprise-grade middleware solutions, collaborating with cross-functional teams to integrate IBM MQ and other messaging platforms (e.g., Kafka, RabbitMQ) into distributed applications that adhere to firm-wide messaging and security standards.",
       "Configured, deployed, and maintained secure, production-ready MQ environments, including queue managers and channels, with a strong focus on message durability, system uptime, and compliance with TLS-based encryption and authentication protocols (OAuth2, Kerberos).",
@@ -141,6 +142,7 @@ export const experienceDetails = [
     company: "TCS",
     role: "Software Engineer", // Assuming this role, please confirm
     duration: "Jun 2020 - July 2022",
+    performanceSummary: "Implemented Spring MVC, developed interactive front-ends, and led scalable API design with TDD.", // Added performance summary
     description: [
       "Implemented Spring MVC architecture to effectively separate presentation, business, and data access layers.",
       "Integrated components using Spring Dependency Injection (DI) for loose coupling and maintainability.",
@@ -167,7 +169,7 @@ const About = () => {
 
       {/* The main content section will now take full width on xl screens */}
       {/* Removed xl:flex-row as Avatar is removed, content will stack vertically */}
-      <div className="container mx-auto h-full flex flex-col items-center xl:pt-[150px]"> {/* Adjusted xl:pt to 150px */}
+      <div className="container mx-auto h-full flex flex-col items-center xl:pt-[80px]"> {/* Adjusted xl:pt to 80px */}
         {/* Removed Avatar component and its wrapper div */}
         {/* The content below will now take full width on xl screens */}
         <div className="flex-1 flex flex-col justify-center w-full">
