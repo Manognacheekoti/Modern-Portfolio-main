@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react"; // Corrected import statement for useState
+import { useState } from "react";
 import CountUp from "react-countup";
 import {
   FaCss3,
@@ -8,27 +8,25 @@ import {
   FaJs,
   FaReact,
   FaWordpress,
-  FaJava, // Added Java icon
-  FaPython, // Added Python icon
-  FaAngular, // Added Angular icon
-  FaAws, // Added AWS icon
-  FaFileDownload, // Added FaFileDownload icon for resume
+  FaJava,
+  FaPython,
+  FaAngular,
+  FaAws,
+  FaFileDownload,
 } from "react-icons/fa";
 import {
   SiAdobephotoshop,
   SiAdobexd,
   SiFramer,
   SiNextdotjs,
-  SiSpringboot, // Added Spring Boot icon
-  SiTensorflow, // Added TensorFlow icon for ML
-  SiPytorch, // Added PyTorch icon for AI
+  SiSpringboot,
+  SiTensorflow,
+  SiPytorch,
 } from "react-icons/si";
 
-// import Avatar from "../../components/Avatar"; // Avatar component removed
 import Circles from "../../components/Circles";
-import { fadeIn } from "../../variants"; // Corrected import path
+import { fadeIn } from "../../variants";
 
-//  data (This data is for the tabs, not directly for the counters below)
 export const aboutData = [
   {
     title: "skills",
@@ -100,13 +98,12 @@ export const aboutData = [
   },
 ];
 
-// New experience data for the dedicated section
 export const experienceDetails = [
   {
     company: "Goldman Sachs",
     role: "Java Developer",
-    duration: "March 2025 - Present", // Please update this with actual dates
-    performanceSummary: "Delivered scalable REST APIs, improved issue resolution by 30%, and reduced deployment time by 40%.", // Added performance summary
+    duration: "March 2025 - Present",
+    performanceSummary: "Delivered scalable REST APIs, improved issue resolution by 30%, and reduced deployment time by 40%.",
     description: [
       "Developed and maintained full-stack Java-based applications using Spring framework, delivering secure and scalable REST APIs to support core banking operations within a cloud-native architecture on AWS (EC2, Lambda, S3).",
       "Engineered backend services focused on resiliency, scalability, and performance, incorporating distributed tracing with AWS X-Ray and observability with Datadog, improving issue resolution time by 30%.",
@@ -122,9 +119,9 @@ export const experienceDetails = [
   },
   {
     company: "PrimeSoft",
-    role: "Software Engineer", // Assuming this role, please confirm
+    role: "Software Engineer",
     duration: "Jan 2023 - Feb 2025",
-    performanceSummary: "Enhanced system observability by 30%, led modernization to event-driven architectures, and automated MQ deployments.", // Added performance summary
+    performanceSummary: "Enhanced system observability by 30%, led modernization to event-driven architectures, and automated MQ deployments.",
     description: [
       "Engineered and supported enterprise-grade middleware solutions, collaborating with cross-functional teams to integrate IBM MQ and other messaging platforms (e.g., Kafka, RabbitMQ) into distributed applications that adhere to firm-wide messaging and security standards.",
       "Configured, deployed, and maintained secure, production-ready MQ environments, including queue managers and channels, with a strong focus on message durability, system uptime, and compliance with TLS-based encryption and authentication protocols (OAuth2, Kerberos).",
@@ -140,9 +137,9 @@ export const experienceDetails = [
   },
   {
     company: "TCS",
-    role: "Software Engineer", // Assuming this role, please confirm
+    role: "Software Engineer",
     duration: "Jun 2020 - July 2022",
-    performanceSummary: "Implemented Spring MVC, developed interactive front-ends, and led scalable API design with TDD.", // Added performance summary
+    performanceSummary: "Implemented Spring MVC, developed interactive front-ends, and led scalable API design with TDD.",
     description: [
       "Implemented Spring MVC architecture to effectively separate presentation, business, and data access layers.",
       "Integrated components using Spring Dependency Injection (DI) for loose coupling and maintainability.",
@@ -161,33 +158,29 @@ export const experienceDetails = [
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  const [clickedExperience, setClickedExperience] = useState(null); // Changed state name to reflect click
+  const [clickedExperience, setClickedExperience] = useState(null);
 
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
 
-      {/* The main content section will now take full width on xl screens */}
-      {/* Removed xl:flex-row as Avatar is removed, content will stack vertically */}
-      <div className="container mx-auto h-full flex flex-col items-center xl:pt-[80px]"> {/* Adjusted xl:pt to 80px */}
-        {/* Removed Avatar component and its wrapper div */}
-        {/* The content below will now take full width on xl screens */}
+      <div className="container mx-auto h-full flex flex-col items-center xl:justify-start xl:pt-[0px]"> {/* Removed xl:pt-[80px] and added xl:justify-start */}
         <div className="flex-1 flex flex-col justify-center w-full">
           <motion.h2
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2"
+            className="h2 mt-8 xl:mt-0" // Added mt-8 for mobile, xl:mt-0 to override for desktop
           >
             My <span className="text-accent">Experience</span>.
           </motion.h2>
           <motion.p
-            variants={fadeIn("right", 0.3)} // Slightly different delay
+            variants={fadeIn("right", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="mx-auto xl:mx-0 mb-6 px-2 xl:px-0 text-white/70" // Removed max-w-[500px]
+            className="mx-auto xl:mx-0 mb-6 px-2 xl:px-0 text-white/70"
           >
             As a **Software Engineer** with a strong background in **scalable backend systems** and **cloud-native development**, I specialize in building robust, high-performance solutions that drive business impact. My expertise lies in **System Design, Distributed Systems, and optimizing performance** in complex environments.
           </motion.p>
@@ -195,7 +188,7 @@ const About = () => {
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
-            className="mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0" // Removed max-w-[500px]
+            className="mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
             Here's a detailed overview of my professional journey, highlighting key roles,
             responsibilities, and achievements across various organizations. **Click** on each
@@ -213,8 +206,8 @@ const About = () => {
               <div
                 key={itemIndex}
                 className="relative group flex flex-col items-center justify-center h-auto min-h-[280px] p-6 rounded-lg cursor-pointer
-                           bg-secondary/20 hover:bg-accent/20 transition-all duration-300" // min-h increased to 280px, changed hover color
-                onClick={() => setClickedExperience(itemIndex)} // Changed to onClick
+                           bg-secondary/20 hover:bg-accent/20 transition-all duration-300"
+                onClick={() => setClickedExperience(itemIndex)}
               >
                 {/* Initial visible content */}
                 <div className={`text-center transition-opacity duration-300 ${clickedExperience === itemIndex ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100 h-full'}`}>
@@ -232,21 +225,21 @@ const About = () => {
             ))}
           </motion.div>
 
-          {/* Download Resume Tile - Now placed after all experience cards */}
+          {/* Download Resume Tile */}
           <motion.div
-            variants={fadeIn("right", 0.7)} // Adjusted delay
+            variants={fadeIn("right", 0.7)}
             initial="hidden"
             animate="show"
             exit="hidden"
             className="flex flex-col items-center justify-center mx-auto mt-8 mb-8 xl:mx-0"
           >
             <a
-              href="/ManognaCheekoti_Resume.pdf" // Placeholder for your resume file
-              download="ManognaCheekoti_Resume.pdf" // Suggested filename for download
+              href="/ManognaCheekoti_Resume.pdf"
+              download="ManognaCheekoti_Resume.pdf"
               className="text-2xl xl:text-4xl font-extrabold text-accent mb-2 cursor-pointer hover:text-white transition-colors duration-300"
               title="Download Resume"
             >
-              <FaFileDownload className="text-4xl xl:text-6xl" /> {/* Download icon */}
+              <FaFileDownload className="text-4xl xl:text-6xl" />
             </a>
             <div className="text-xs uppercase tracking-[1px] leading-[1.4] text-center max-w-[100px] mt-2">
               Download Resume
@@ -256,29 +249,25 @@ const About = () => {
       </div>
 
       {/* Render the clicked experience as a fixed overlay (modal-like) */}
-      {/* This modal is always rendered but its visibility is controlled by CSS */}
       <div className={`fixed inset-0 flex items-center justify-center z-50 bg-black/70
                        transition-opacity duration-300
                        ${clickedExperience !== null ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
-           // Add onMouseLeave to the overlay background itself to close it
            onMouseLeave={() => setClickedExperience(null)}
-           // Add onClick to the overlay background to close it if clicked outside the content
            onClick={() => setClickedExperience(null)}
       >
         <div className="relative w-[95%] md:w-[80%] xl:w-[65%] max-w-[1000px] max-h-[90vh]
                         flex flex-col p-8 rounded-lg bg-secondary/95 text-white/90
                         overflow-y-auto transform scale-100 opacity-100 transition-all duration-300 ease-out"
-             // Prevent click/mouse leave on the content from closing the modal
              onClick={(e) => e.stopPropagation()}
-             onMouseEnter={(e) => e.stopPropagation()} // Stop propagation to prevent immediate re-triggering of parent's mouseenter
+             onMouseEnter={(e) => e.stopPropagation()}
         >
           <button
             onClick={() => setClickedExperience(null)}
             className="absolute top-4 right-4 text-white text-2xl cursor-pointer hover:text-accent transition-colors duration-200"
           >
-            &times; {/* Close button */}
+            &times;
           </button>
-          {clickedExperience !== null && ( // Conditionally render content only if an experience is clicked
+          {clickedExperience !== null && (
             <>
               <h3 className="text-2xl font-bold text-accent mb-3 text-center">{experienceDetails[clickedExperience].company} - {experienceDetails[clickedExperience].role}</h3>
               <p className="text-base text-white/70 mb-4 text-center">{experienceDetails[clickedExperience].duration}</p>
