@@ -15,13 +15,13 @@ export const educationData = [
   {
     degree: "Master in Computer Science",
     university: "University of South Florida",
-    
+    duration: "Please add your dates here (e.g., 2022 - 2024)",
     description: "Focused on advanced topics in software engineering, data science, and artificial intelligence, gaining expertise in designing and implementing complex systems.",
   },
   {
     degree: "Bachelor of Technology in Computer Science",
     university: "Gitam University",
-    
+    duration: "Please add your dates here (e.g., 2016 - 2020)",
     description: "Developed a strong foundation in computer science fundamentals, including algorithms, data structures, and programming paradigms, with practical experience in various software development projects.",
   },
 ];
@@ -70,10 +70,10 @@ const Work = () => {
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center">
       <Circles />
-      <div className="container mx-auto h-full"> {/* Ensure container takes full height */}
-        <div className="flex flex-col xl:flex-row gap-x-8 h-full"> {/* Make this row take full height */}
+      <div className="container mx-auto h-full flex flex-col"> {/* Removed xl:flex-row from here, moved to inner div */}
+        <div className="flex flex-col xl:flex-row gap-x-8 h-full min-h-0"> {/* Added min-h-0 and h-full */}
           {/* Left Half: Education Section */}
-          <div className="text-center flex xl:w-1/2 flex-col lg:text-left mb-4 xl:mb-0 xl:pr-4"> {/* Adjusted width and added padding */}
+          <div className="text-center flex xl:w-1/2 flex-col lg:text-left mb-4 xl:mb-0 xl:pr-4 min-h-0"> {/* Added min-h-0 */}
             <motion.h2
               variants={fadeIn("up", 0.2)}
               initial="hidden"
@@ -99,7 +99,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="flex flex-col gap-y-4 mt-8"
+              className="flex flex-col gap-y-4 mt-8 overflow-y-auto max-h-[calc(50vh)]" /* Adjusted max-h for education section */
             >
               <h3 className="h3 text-accent text-center xl:text-left">Degrees</h3>
               {educationData.map((edu, eduIndex) => (
@@ -118,7 +118,7 @@ const Work = () => {
           </div>
 
           {/* Right Half: Academic Projects Section */}
-          <div className="flex flex-col xl:w-1/2 xl:pl-4"> {/* Adjusted width and added padding */}
+          <div className="flex flex-col xl:w-1/2 xl:pl-4 min-h-0"> {/* Added min-h-0 */}
             <motion.h3
               variants={fadeIn("down", 0.2)}
               initial="hidden"
@@ -143,7 +143,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="flex flex-col gap-y-4 mt-8 overflow-y-auto max-h-[calc(100vh-250px)]" // Added max-height and overflow for scrollability
+              className="flex flex-col gap-y-4 mt-8 overflow-y-auto max-h-[calc(100vh-350px)]" // Adjusted max-h for projects section
             >
               {academicProjects.map((project, projectIndex) => (
                 <div

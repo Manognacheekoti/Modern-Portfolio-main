@@ -169,7 +169,7 @@ const About = () => {
 
       {/* The main content section will now take full width on xl screens */}
       {/* Removed xl:flex-row as Avatar is removed, content will stack vertically */}
-      <div className="container mx-auto h-full flex flex-col items-center xl:pt-[180px]">
+      <div className="container mx-auto h-full flex flex-col items-center xl:pt-[120px]"> {/* Adjusted xl:pt to 120px */}
         {/* Removed Avatar component and its wrapper div */}
         {/* The content below will now take full width on xl screens */}
         <div className="flex-1 flex flex-col justify-center w-full">
@@ -213,7 +213,7 @@ const About = () => {
               <div
                 key={itemIndex}
                 className="relative group flex flex-col items-center justify-center h-auto min-h-[280px] p-6 rounded-lg cursor-pointer
-                           bg-secondary/20 hover:bg-accent/20 transition-all duration-300" // Changed hover color
+                           bg-secondary/20 hover:bg-accent/20 transition-all duration-300" // min-h increased to 280px, changed hover color
                 onClick={() => setClickedExperience(itemIndex)} // Changed to onClick
               >
                 {/* Initial visible content */}
