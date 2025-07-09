@@ -110,7 +110,7 @@ const About = () => {
       {/* Adjusted xl:pt to ensure content is below the header */}
       <div className="w-full h-full flex flex-col xl:flex-row items-center xl:pt-[180px]" style={{margin: 0, padding: 0}}> {/* Adjusted xl:pt for better spacing */}
         {/* Avatar on the left */}
-        <div className="hidden xl:flex flex-1 h-full">
+        <div className="hidden xl:flex items-center justify-center w-[320px] h-[320px] min-w-[320px] min-h-[320px] max-w-[320px] max-h-[320px] mx-auto xl:mx-0">
           <Avatar />
         </div>
         {/* text content on the right */}
