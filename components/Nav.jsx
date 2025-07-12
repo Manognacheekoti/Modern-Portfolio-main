@@ -15,10 +15,10 @@ import {
 export const navData = [
   { name: "home", path: "/", Icon: HiHome },
   { name: "about", path: "/about", Icon: HiUser },
-  { name: "services", path: "/services", Icon: HiRectangleGroup },
-  { name: "work", path: "/work", Icon: HiViewColumns },
+  { name: "experience", path: "/services", Icon: HiRectangleGroup },
+  { name: "education", path: "/work", Icon: HiViewColumns },
   {
-    name: "testimonials",
+    name: "strength",
     path: "/testimonials",
     Icon: HiChatBubbleBottomCenterText,
   },

@@ -7,20 +7,15 @@ const Header = () => {
   return (
     <header className="absolute z-30 w-full items-center px-16 xl-px-0 xl:h-[120px]"> {/* Increased header height */}
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8">
-          {/* logo */}
-          <Link href="/">
-            <Image
-              src="/logo.svg"
-              alt="logo"
-              width={550} // Increased width to accommodate the larger SVG content
-              height={100}  // Increased height to accommodate the larger SVG content
-              priority
-            />
-          </Link>
-
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8 w-full">
+          {/* GitHub-style profile header */}
+          <div className="flex flex-col items-start">
+            <span className="text-3xl xl:text-4xl font-bold flex items-center gap-2">
+              Manogna Cheekoti <span className="animate-wave">👋</span>
+            </span>
+          </div>
           {/* socials */}
-          <Socials /> {/* This will now render the updated social icons */}
+          <Socials />
         </div>
       </div>
     </header>

@@ -14,7 +14,7 @@ export const socialData = [
   },
   {
     name: "Github",
-    link: "https://github.com/sanidhyy/modern-portfolio",
+    link: "https://github.com/Manognacheekoti",
     Icon: RiGithubLine,
   },
   {
